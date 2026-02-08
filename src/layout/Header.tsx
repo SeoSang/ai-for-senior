@@ -16,17 +16,17 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 px-6 py-5 flex items-center justify-between">
-      <h1 className="text-3xl font-bold text-slate-900 leading-tight">{getTitle()}</h1>
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-stone-100/50 px-6 py-5 flex items-center justify-between shadow-sm">
+      <h1 className="text-2xl font-serif font-bold text-slate-800 tracking-tight">{getTitle()}</h1>
       
       {location.pathname !== '/' && (
         <button 
           onClick={() => navigate('/')}
-          className="flex flex-col items-center justify-center p-2 rounded-xl bg-teal-50 text-teal-700 border border-teal-100 active:scale-95 transition-transform"
+          className="flex flex-col items-center justify-center p-2 rounded-xl bg-stone-50 hover:bg-stone-100 text-slate-600 border border-stone-200 active:scale-95 transition-all"
           aria-label="처음으로 돌아가기"
         >
-          <Home size={24} strokeWidth={2.5} />
-          <span className="text-xs font-bold mt-0.5">처음으로</span>
+          <Home size={22} strokeWidth={2} />
+          <span className="text-[10px] font-bold mt-0.5 tracking-wide">HOME</span>
         </button>
       )}
     </header>

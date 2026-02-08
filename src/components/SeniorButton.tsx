@@ -18,17 +18,17 @@ const SeniorButton = ({
   ...props 
 }: SeniorButtonProps) => {
   
-  const baseStyles = "relative flex items-center justify-center gap-3 px-8 py-4 rounded-2xl transition-all duration-200 font-bold text-xl min-h-[60px]";
+  const baseStyles = "relative flex items-center justify-center gap-3 px-8 py-4 rounded-2xl transition-all duration-300 font-bold text-xl min-h-[60px] active:scale-[0.98]";
   
   const variants = {
-    primary: "bg-stone-50 text-teal-900 shadow-soft hover:shadow-soft-hover active:shadow-soft-active border border-stone-100",
-    secondary: "bg-stone-50 text-slate-700 shadow-soft hover:shadow-soft-hover active:shadow-soft-active border border-stone-100",
-    danger: "bg-stone-50 text-red-600 shadow-soft hover:shadow-soft-hover active:shadow-soft-active border border-red-50"
+    primary: "bg-white text-emerald-900 shadow-card hover:shadow-soft-hover border border-stone-200 hover:border-emerald-200/50 hover:bg-emerald-50/10",
+    secondary: "bg-white text-slate-800 shadow-card hover:shadow-soft-hover border border-stone-200 hover:border-slate-200",
+    danger: "bg-white text-red-700 shadow-card hover:shadow-soft-hover border border-stone-200 hover:border-red-100"
   };
 
   return (
     <motion.button
-      whileTap={{ scale: 0.95 }}
+      whileTap={{ scale: 0.98 }}
       className={`
         ${baseStyles}
         ${variants[variant]}

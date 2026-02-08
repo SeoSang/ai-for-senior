@@ -7,14 +7,29 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        'soft': '8px 8px 16px #d1d1cf, -8px -8px 16px #ffffff',
-        'soft-hover': '10px 10px 20px #d1d1cf, -10px -10px 20px #ffffff, inset 0 0 0 2px #d1d1cf',
-        'soft-active': 'inset 6px 6px 12px #d1d1cf, inset -6px -6px 12px #ffffff',
+        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)', // Elegant, subtle lift
+        'soft-hover': '0 10px 25px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03)',
+        'soft-active': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+        'card': '0 0 0 1px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.04)', // Delicate border + shadow
       },
       colors: {
         stone: {
-          50: '#F8FAF5', // Warmer custom beige
+          50: '#F9FAFB', // Cool-warm white
+          100: '#F3F4F6', // Layering
+          200: '#E5E7EB', // Borders
+        },
+        emerald: {
+          800: '#064E3B', // Deep Luxury Green
+          900: '#022C22', // Almost Black Green
+        },
+        amber: {
+          100: '#FEF3C7', // Soft Gold Highlight
+          400: '#FBBF24', // Gold Accent
         }
+      },
+      fontFamily: {
+        serif: ['"Noto Serif KR"', 'serif'],
+        sans: ['"Noto Sans KR"', 'sans-serif'],
       }
     },
   },
