@@ -1,15 +1,15 @@
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Home, BookOpen, LayoutGrid, Briefcase } from 'lucide-react';
+import { Home, BookOpen, User, BookHeart } from 'lucide-react';
 
 const BottomNav = () => {
-  const navigate = useNavigate();
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navItems = [
-    { label: '홈',   path: '/',        icon: Home },
-    { label: '개념관', path: '/learn',   icon: BookOpen },
-    { label: '체험관', path: '/sandbox', icon: LayoutGrid },
-    { label: '도구',   path: '/tools',   icon: Briefcase },
+    { path: '/', icon: Home, label: '홈' },
+    { path: '/learn', icon: BookOpen, label: '개념관' },
+    { path: '/usage', icon: BookHeart, label: '활용법' },
+    { path: '/sandbox', icon: User, label: '체험관' },
   ];
 
   return (

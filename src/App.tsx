@@ -5,6 +5,8 @@ import Learn from './pages/Learn';
 import Sandbox from './pages/Sandbox';
 import Tools from './pages/Tools';
 
+import Usage from './pages/Usage';
+
 function App() {
   return (
     <Router>
@@ -12,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/learn" element={<Learn />} />
+          <Route path="/usage" element={<Usage />} />
           <Route path="/sandbox" element={<Sandbox />} />
           <Route path="/tools" element={<Tools />} />
         </Routes>
