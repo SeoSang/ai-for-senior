@@ -1,8 +1,12 @@
-import React from 'react';
+import { ReactNode } from 'react';
 import Header from './Header';
 import BottomNav from './BottomNav';
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen bg-stone-50 flex flex-col">
       <Header />
