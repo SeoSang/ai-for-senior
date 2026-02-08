@@ -17,23 +17,34 @@
 - **Package Manager**: `pnpm`.
 
 ## 3. Senior-Friendly UX/UI Guidelines (CRITICAL)
-### Typography
+### Typography & Layout
 - **Base Font Size**: Minimum **18px** (`text-lg`).
 - **Headings**: Bold and large (`text-2xl` to `text-4xl`).
 - **Line Height**: Relaxed (`leading-relaxed`) to prevent reading fatigue.
-- **Font Family**: System fonts or 'Noto Sans KR'.
+- **Max Width**: Limit content width (`max-w-2xl`) to prevent long lines.
+- **Spacing**: Use wide gaps (1.5x normal).
+- **Highlighting**: Use `bg-yellow-200` for key terms (e.g., AI, Safety).
 
 ### Color Palette
 - **Background**: Warm White / Beige (`bg-stone-50`) to reduce eye strain.
 - **Text**: Dark Grey (`text-slate-900`) for high contrast.
-  - ❌ NEVER use light grey for body text.
 - **Primary Action**: Teal or Warm Green (`bg-teal-600`).
-  - ❌ Avoid aggressive reds (except for critical errors).
+- **Shadows**: Soft UI (Neumorphism) - `bg-stone-50` with highlights and shadows for depth.
 
 ### Interaction
 - **Touch Targets**: All clickable elements must be at least **48px** (`h-12`) high.
-- **Feedback**: Visual cues (color change, loading spinners, ripples) are **MANDATORY** for every click/tap.
-- **Navigation**: clear, labeled, and consistent (e.g., Bottom Navigation).
+- **Button Style**: "Soft UI" tactile buttons.
+  - Default: Slightly raised.
+  - Hover/Touch: Sharper border.
+  - Active: Inset shadow + `scale-95` animation.
+- **Feedback**: Visual cues are **MANDATORY**.
+- **Icons**: Always labeled. Icon size (`size={28}`) > Text size.
+
+### Safety & Navigation
+- **Confirmation**: Use large "Safety Modals" for destructive actions.
+  - Tone: Kindly ("잠깐만요!", "지울까요?").
+  - Buttons: Large, bottom-aligned. Prevent background click close.
+- **Home Button**: Prominent "First Page" button visible at all times.
 
 ### Wording & Tone
 - **Language**: Polite, honorific Korean (**존댓말**).
